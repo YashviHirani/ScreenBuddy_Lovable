@@ -1,0 +1,19 @@
+{
+  "name": "screenbuddy",
+  "version": "1.0.0",
+  "description": "ScreenBuddy desktop app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^40.0.0"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.2.3",
+    "openai": "^6.16.0"
+  }
+}

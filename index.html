@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self';
+                 script-src 'self';
+                 style-src 'self' 'unsafe-inline';
+                 img-src 'self' data:;
+                 media-src 'self';">
+
+  <title>ScreenBuddy</title>
+</head>
+<body>
+
+  <div id="recordIndicator"
+       style="display:none; background:red; color:white;
+              padding:12px; font-size:18px;
+              font-weight:bold; text-align:center;">
+    🔴 SCREEN MONITORING IS ACTIVE
+  </div>
+
+  <br>
+
+  <button id="startBtn">Start Monitoring</button>
+  <button id="stopBtn">Stop Monitoring</button>
+
+  <br><br>
+
+  <video id="preview" autoplay muted style="width:100%; border:1px solid black;"></video>
+<button id="pushBtn">Push Code</button>
+<div id="ai-advice-box" style="display:none; margin-top:15px;">
+  <h4>🧠 ScreenBuddy Suggestion</h4>
+  <p id="ai-advice-text"></p>
+</div>
+<div id="goal-panel" style="margin-top:20px; padding:12px; border:1px solid #ccc;">
+  <h4>🎯 Set Your Goal</h4>
+
+  <input
+    type="text"
+    id="goalInput"
+    placeholder="e.g. I want to push my code"
+    style="width:100%; padding:6px;"
+  />
+
+  <button id="startGoalBtn" style="margin-top:8px;">
+    Start Goal
+  </button>
+
+  <div id="goalStatus" style="margin-top:10px; font-style:italic;">
+    No active goal
+  </div>
+
+  <div id="goalAdvice" style="margin-top:10px;">
+    <!-- AI guidance will appear here later -->
+  </div>
+</div>
+
+
+  <script src="renderer.js"></script>
+</body>
+</html>
